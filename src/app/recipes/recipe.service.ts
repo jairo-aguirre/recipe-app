@@ -30,6 +30,10 @@ export class RecipeService {
     return this.recipes.slice(); // Shallow Copy of recipes with slice(), for a Deep Copy use JSON.parse(JSON.stringify(recipes));
   }
 
+  getRecipe(index: number) {
+    return this.recipes[index];
+  }
+
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.shoppingListService.addIngredients(ingredients);
   }
